@@ -7,27 +7,4 @@ recentfile3	\Eric\Main\LocalBus\WebSites.java
 recentfile4	\Eric\Main\LocalBus\URLParse.java
 recentfile5	\Eric\Main\LocalBus\AnalyzeNewLinks.java
 recentfile6	\Eric\Main\LocalBus\URLFileDictionary.java
-recentfile7	
-recentfile8	
-recentfile9	
-recentfile10	
-recentfile11	
-recentfile12	
-recentfile13	
-recentfile14	
-recentfile15	
-recentfile16	
-recentfile17	
-recentfile18	
-recentfile19	
-recentfile20	
-recentfile21	
-recentfile22	
-recentfile23	
-recentfile24	
-recentfile25	
-recentfile26	
-recentfile27	
-recentfile28	
-recentfile29	
-recentfile30	
+recentfile7	\Eric\Main\LocalBus\HtmlFile.java

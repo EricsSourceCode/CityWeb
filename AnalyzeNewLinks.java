@@ -1,6 +1,5 @@
 // Copyright Eric Chauvin 2020 - 2024.
 
-===== Where are the links?
 
 
 public class AnalyzeNewLinks implements Runnable
@@ -52,6 +51,8 @@ public class AnalyzeNewLinks implements Runnable
         mApp.showStatusAsync( "URL Records: " + count );
 
       StrA line = linesArray.getStrAt( count );
+      // mApp.showStatusAsync(
+      //            "uFile line: " + line );
 
       URLFile uFile = new URLFile( mApp );
       uFile.setFromStrA( line );
@@ -72,12 +73,15 @@ public class AnalyzeNewLinks implements Runnable
 
       // mApp.showStatusAsync( "" + line );
       StrA filePath = new StrA(
-                 "\\AILocalBus\\URLFiles\\" );
+             "\\AILocalBusData\\URLFiles\\" );
       filePath = filePath.concat( fileName );
       // mApp.showStatusAsync( "filePath: " + filePath );
 
       if( !FileUtility.exists( filePath ))
         {
+        // mApp.showStatusAsync(
+        //              "File doesn't exist." );
+
         // This doesn't happen below:
         // setAnchorsPulledTrue();
         continue;
@@ -97,10 +101,16 @@ public class AnalyzeNewLinks implements Runnable
                                      uFile.getUrl(),
                                      filePath );
 
+      // mApp.showStatusAsync(
+      //                "Before markup." );
+
       if( !hFile.markUpFile())
         {
         return;
         }
+
+      // mApp.showStatusAsync(
+      //        "Before hfile.processanchor." );
 
       hFile.processNewAnchorTags();
 
@@ -119,7 +129,8 @@ public class AnalyzeNewLinks implements Runnable
       // doesn't get set to true because it never
       // gets here.
       uFile.setAnchorsPulledTrue();
-      urlDictionary.setValue( uFile.getUrl(), uFile );
+      urlDictionary.setValue( uFile.getUrl(),
+                              uFile );
       }
 
     urlDictionary.saveToFile();

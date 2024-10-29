@@ -83,6 +83,7 @@ public class WebSites implements ActionListener,
 
   public void analyze()
     {
+    // mApp.showStatusAsync( "analyze()." );
     AnalyzeNewLinks newLinks = new AnalyzeNewLinks(
                                 mApp, urlDictionary );
     Thread aThread = new Thread( newLinks );
@@ -165,7 +166,8 @@ public class WebSites implements ActionListener,
                                   StrA.Empty );
 
     // mApp.showStatusAsync( "\nurlToGet is:\n" + urlToGet );
-    URLFile uFile = urlDictionary.getValue( urlToGet );
+    URLFile uFile = urlDictionary.getValue(
+                                  urlToGet );
     if( uFile == null )
       uFile = new URLFile( mApp, urlToGet );
 
@@ -222,6 +224,9 @@ public class WebSites implements ActionListener,
     urlFifo.setValue( new StrA(
          "https://www.leadvilleherald.com/" ));
 
+    urlFifo.setValue( new StrA(
+         "https://www.leadvilleherald.com/news" ));
+
 
     // Add it to isGoodFullFile() too.
     // _And_ URLParse.hasValidDomain()
@@ -233,8 +238,10 @@ public class WebSites implements ActionListener,
 
   private void addEmptyFilesToFifo()
     {
-    mApp.showStatusAsync( "Adding empty files to Fifo." );
-    StrA fileS = urlDictionary.makeKeysValuesStrA();
+    mApp.showStatusAsync(
+             "Adding empty files to Fifo." );
+    StrA fileS = urlDictionary.
+                       makeKeysValuesStrA();
 
     StrArray linesArray = fileS.splitChar( '\n' );
     final int last = linesArray.length();
@@ -259,8 +266,9 @@ public class WebSites implements ActionListener,
         if( !isGoodFullFile( urlToGet ))
           continue;
 
+        // HTTP error 429 is too many requests.
         howMany++;
-        if( howMany > 20 )
+        if( howMany > 10 )
           break;
 
         mApp.showStatusAsync( "\nAdding to Fifo: (" +
@@ -276,6 +284,10 @@ public class WebSites implements ActionListener,
 
   private boolean isGoodFullFile( StrA in )
     {
+    if( in.containsStrA( new StrA(
+        "leadvilleherald.com/eedition/" )))
+      return false;
+
     if( in.containsStrA( new StrA(
         "/site/forms/" )))
       return false;

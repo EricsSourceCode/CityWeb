@@ -117,7 +117,8 @@ public class URLParse
     linkText = linkText.cleanUnicodeField().trim();
     linkText = HtmlFile.fixAmpersandChars( linkText );
 
-    // mApp.showStatusAsync( "\nlinkText: " + linkText );
+    // mApp.showStatusAsync(
+    //    "\nUrlParse linkText: " + linkText );
 
     StrA insideTag = lineParts.getStrAt( 0 );
 
@@ -437,7 +438,15 @@ public class URLParse
     // wa.me is WhatsApp.
     // Messaging app owned by Facebook.
 
+    if( link.containsStrA( new StrA(
+        "leadvilleherald.com/eedition/" )))
+      return true;
+
     if( link.containsStrA( new StrA( "https://wa.me/" )))
+      return true;
+
+    if( link.containsStrA( new StrA(
+                             "bloxcms.com" )))
       return true;
 
     if( link.containsStrA( new StrA( "mailto:" )))
