@@ -225,7 +225,13 @@ public class WebSites implements ActionListener,
          "https://www.leadvilleherald.com/" ));
 
     urlFifo.setValue( new StrA(
-         "https://www.leadvilleherald.com/news" ));
+         "https://www.leadvilleherald.com/news/" ));
+
+    urlFifo.setValue( new StrA(
+   "https://www.leadvilleherald.com/news/business/" ));
+
+    urlFifo.setValue( new StrA(
+   "https://www.leadvilleherald.com/marketplace/" ));
 
 
     // Add it to isGoodFullFile() too.
