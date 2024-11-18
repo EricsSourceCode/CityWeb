@@ -72,15 +72,19 @@ public class AnalyzeNewLinks implements Runnable
 
 
       // mApp.showStatusAsync( "" + line );
+
+
       StrA filePath = new StrA(
-             "\\AILocalBusData\\URLFiles\\" );
+             "\\EconData\\URLFiles\\" );
+
+
       filePath = filePath.concat( fileName );
       // mApp.showStatusAsync( "filePath: " + filePath );
 
       if( !FileUtility.exists( filePath ))
         {
         // mApp.showStatusAsync(
-        //              "File doesn't exist." );
+        //             "File doesn't exist." );
 
         // This doesn't happen below:
         // setAnchorsPulledTrue();

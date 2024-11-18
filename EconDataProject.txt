@@ -1,0 +1,33 @@
+buildfile	C:\Eric\Main\EconData\BuildProj.bat
+executablefile	C:\Eric\Main\EconData\RunApp.bat
+projectdirectory	\Eric\Main\EconData
+recentfile1	C:\Eric\Main\EconData\MainApp.java
+recentfile2	\Eric\Main\Docs\Notes.txt
+recentfile3	\Eric\Main\EconData\BuildProj.bat
+recentfile4	\Eric\Main\EconData\RunApp.bat
+recentfile5	\Eric\Main\EconData\WebSites.java
+recentfile6	\Eric\Main\EconData\URLParse.java
+recentfile7	\Eric\Main\EconData\AnalyzeNewLinks.java
+recentfile8	\Eric\Main\EconData\HtmlFile.java
+recentfile9	
+recentfile10	
+recentfile11	
+recentfile12	
+recentfile13	
+recentfile14	
+recentfile15	
+recentfile16	
+recentfile17	
+recentfile18	
+recentfile19	
+recentfile20	
+recentfile21	
+recentfile22	
+recentfile23	
+recentfile24	
+recentfile25	
+recentfile26	
+recentfile27	
+recentfile28	
+recentfile29	
+recentfile30	

@@ -12,7 +12,7 @@
 
 // Local Business Project.
 
-// "\\AILocalBusData\\URLFiles\\"
+// "\\EconData\\URLFiles\\"
 
 
 
@@ -29,7 +29,7 @@ import java.io.IOException;
 class MainApp implements Runnable, Serializable
   {
   public static final String versionDate =
-                              "10/30/2024";
+                              "11/18/2024";
   public static final long serialVersionUID = 1;
 
 
@@ -107,7 +107,7 @@ class MainApp implements Runnable, Serializable
     */
 
     mainWin = new MainWindow( this,
-                              "Local Business" );
+                              "Econ Research" );
     mainWin.initialize();
 
     /*

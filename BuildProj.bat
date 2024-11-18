@@ -11,7 +11,7 @@ rem SET CLASSPATH=C:\Javajdk\lib;C:\Javajdk\jre\lib;
 rem SET PATH=%PATH%;%JAVA_HOME%\bin;
 
 rem Compile all of them.
-cd \Eric\Main\LocalBus
+cd \Eric\Main\EconData
 del *.class
 
 

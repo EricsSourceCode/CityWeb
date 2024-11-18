@@ -10,7 +10,7 @@
 
 
 
-// Local Business project.
+// Econ Research
 
 
 
@@ -142,7 +142,7 @@ public final class MainWindow extends JFrame
              "Programming by Eric Chauvin.\n" +
              "Version date: " +
              MainApp.versionDate + "\n\n" +
-             "Local Business";
+             "Economic Research";
 
     showStatusAsync( allTogether );
     }

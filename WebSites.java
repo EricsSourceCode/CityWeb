@@ -44,7 +44,7 @@ public class WebSites implements ActionListener,
     {
     mApp = appToUse;
     StrA fileName = new StrA(
-          "\\AILocalBusData\\UrlDictionary.txt" );
+          "\\EconData\\UrlDictionary.txt" );
 
     urlDictionary = new URLFileDictionary( mApp,
                                      fileName );
@@ -118,7 +118,11 @@ public class WebSites implements ActionListener,
   private void setupTimer()
     {
     // HTTP error 429 is too many requests.
-    // So slow it down.
+    // Even waiting 73 seconds doesn't
+    // work.  Is it keeping the TLS connection
+    // alive or something?
+
+    // Very slow...
     int delay = 1000 * 4;
     getURLTimer = new Timer( delay, this );
     getURLTimer.start();
@@ -175,7 +179,7 @@ public class WebSites implements ActionListener,
     urlDictionary.setValue( urlToGet, uFile );
 
     String fileName = uFile.getFileName().toString();
-    fileName = "\\AILocalBusData\\URLFiles\\" +
+    fileName = "\\EconData\\URLFiles\\" +
                              fileName;
     // mApp.showStatusAsync( "File name: " + fileName );
     String urlS = urlToGet.toString();
@@ -222,16 +226,11 @@ public class WebSites implements ActionListener,
   public void addURLsToFifo()
     {
     urlFifo.setValue( new StrA(
-         "https://www.leadvilleherald.com/" ));
+         "https://research.stlouisfed.org/" ));
 
     urlFifo.setValue( new StrA(
-         "https://www.leadvilleherald.com/news/" ));
+    "https://research.stlouisfed.org/news-releases" ));
 
-    urlFifo.setValue( new StrA(
-   "https://www.leadvilleherald.com/news/business/" ));
-
-    urlFifo.setValue( new StrA(
-   "https://www.leadvilleherald.com/marketplace/" ));
 
 
     // Add it to isGoodFullFile() too.
@@ -261,7 +260,7 @@ public class WebSites implements ActionListener,
 
       // mApp.showStatusAsync( "" + line );
       StrA filePath = new StrA(
-              "\\AILocalBusData\\URLFiles\\" );
+              "\\EconData\\URLFiles\\" );
       filePath = filePath.concat( fileName );
       // mApp.showStatusAsync( "filePath: " + filePath );
 
@@ -290,10 +289,6 @@ public class WebSites implements ActionListener,
 
   private boolean isGoodFullFile( StrA in )
     {
-    if( in.containsStrA( new StrA(
-        "leadvilleherald.com/eedition/" )))
-      return false;
-
     if( in.containsStrA( new StrA(
         "/site/forms/" )))
       return false;
@@ -375,8 +370,11 @@ public class WebSites implements ActionListener,
            "/../" )))
       return false;
 
+
+
     if( in.containsStrA( new StrA(
-           "leadvilleherald.com" )))
+         // "research.stlouisfed.org/" )))
+         ".stlouisfed.org/" )))
       return true;
 
     return false;

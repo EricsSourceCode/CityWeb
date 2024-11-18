@@ -249,8 +249,8 @@ public class URLParse
     badLinkArray.append( new StrA(
     ".foxnews.com/opinion/" ));
 
-    badLinkArray.append( new StrA(
-      "libertystreeteconomics.newyorkfed.org/" ));
+    // badLinkArray.append( new StrA(
+      // "libertystreeteconomics.newyorkfed.org/" ));
 
     badLinkArray.append( new StrA(
    ".foxnews.com/video/" ));
@@ -397,7 +397,7 @@ public class URLParse
       return false;
 
     if( link.containsStrA( new StrA(
-           "leadvilleherald.com" )))
+           ".stlouisfed.org/" )))
       return true;
 
     return false;
