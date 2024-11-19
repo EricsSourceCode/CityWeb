@@ -397,6 +397,10 @@ public class URLParse
       return false;
 
     if( link.containsStrA( new StrA(
+         ".federalreserve.gov/" )))
+      return true;
+
+    if( link.containsStrA( new StrA(
            ".stlouisfed.org/" )))
       return true;
 

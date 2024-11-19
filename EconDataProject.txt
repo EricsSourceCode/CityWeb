@@ -9,25 +9,3 @@ recentfile5	\Eric\Main\EconData\WebSites.java
 recentfile6	\Eric\Main\EconData\URLParse.java
 recentfile7	\Eric\Main\EconData\AnalyzeNewLinks.java
 recentfile8	\Eric\Main\EconData\HtmlFile.java
-recentfile9	
-recentfile10	
-recentfile11	
-recentfile12	
-recentfile13	
-recentfile14	
-recentfile15	
-recentfile16	
-recentfile17	
-recentfile18	
-recentfile19	
-recentfile20	
-recentfile21	
-recentfile22	
-recentfile23	
-recentfile24	
-recentfile25	
-recentfile26	
-recentfile27	
-recentfile28	
-recentfile29	
-recentfile30	

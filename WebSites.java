@@ -226,6 +226,9 @@ public class WebSites implements ActionListener,
   public void addURLsToFifo()
     {
     urlFifo.setValue( new StrA(
+     "https://www.federalreserve.gov/" ));
+
+    urlFifo.setValue( new StrA(
          "https://research.stlouisfed.org/" ));
 
     urlFifo.setValue( new StrA(
@@ -273,7 +276,7 @@ public class WebSites implements ActionListener,
 
         // HTTP error 429 is too many requests.
         howMany++;
-        if( howMany > 10 )
+        if( howMany > 5 )
           break;
 
         mApp.showStatusAsync( "\nAdding to Fifo: (" +
@@ -377,6 +380,9 @@ public class WebSites implements ActionListener,
          ".stlouisfed.org/" )))
       return true;
 
+    if( in.containsStrA( new StrA(
+           ".federalreserve.gov/" )))
+      return true;
     return false;
     }
 
