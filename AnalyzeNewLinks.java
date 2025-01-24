@@ -1,4 +1,11 @@
-// Copyright Eric Chauvin 2020 - 2024.
+// Copyright Eric Chauvin 2020 - 2025.
+
+
+// This is licensed under the GNU General
+// Public License (GPL).  It is the
+// same license that Linux has.
+// https://www.gnu.org/licenses/gpl-3.0.html
+
 
 
 
@@ -75,7 +82,7 @@ public class AnalyzeNewLinks implements Runnable
 
 
       StrA filePath = new StrA(
-             "\\EconData\\URLFiles\\" );
+             "\\CityData\\URLFiles\\" );
 
 
       filePath = filePath.concat( fileName );

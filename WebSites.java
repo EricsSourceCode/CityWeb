@@ -1,4 +1,4 @@
-// Copyright Eric Chauvin 2020 - 2024.
+// Copyright Eric Chauvin 2020 - 2025.
 
 
 
@@ -44,7 +44,7 @@ public class WebSites implements ActionListener,
     {
     mApp = appToUse;
     StrA fileName = new StrA(
-          "\\EconData\\UrlDictionary.txt" );
+          "\\CityData\\UrlDictionary.txt" );
 
     urlDictionary = new URLFileDictionary( mApp,
                                      fileName );
@@ -179,7 +179,7 @@ public class WebSites implements ActionListener,
     urlDictionary.setValue( urlToGet, uFile );
 
     String fileName = uFile.getFileName().toString();
-    fileName = "\\EconData\\URLFiles\\" +
+    fileName = "\\CityData\\URLFiles\\" +
                              fileName;
     // mApp.showStatusAsync( "File name: " + fileName );
     String urlS = urlToGet.toString();
@@ -226,14 +226,7 @@ public class WebSites implements ActionListener,
   public void addURLsToFifo()
     {
     urlFifo.setValue( new StrA(
-     "https://www.federalreserve.gov/" ));
-
-    urlFifo.setValue( new StrA(
-         "https://research.stlouisfed.org/" ));
-
-    urlFifo.setValue( new StrA(
-    "https://research.stlouisfed.org/news-releases" ));
-
+         "https://www.leadville-co.gov/" ));
 
 
     // Add it to isGoodFullFile() too.
@@ -263,7 +256,7 @@ public class WebSites implements ActionListener,
 
       // mApp.showStatusAsync( "" + line );
       StrA filePath = new StrA(
-              "\\EconData\\URLFiles\\" );
+              "\\CityData\\URLFiles\\" );
       filePath = filePath.concat( fileName );
       // mApp.showStatusAsync( "filePath: " + filePath );
 
@@ -276,7 +269,7 @@ public class WebSites implements ActionListener,
 
         // HTTP error 429 is too many requests.
         howMany++;
-        if( howMany > 5 )
+        if( howMany > 10 )
           break;
 
         mApp.showStatusAsync( "\nAdding to Fifo: (" +
@@ -293,99 +286,55 @@ public class WebSites implements ActionListener,
   private boolean isGoodFullFile( StrA in )
     {
     if( in.containsStrA( new StrA(
-        "/site/forms/" )))
+             ".leadville-co.gov/login" )))
       return false;
 
     if( in.containsStrA( new StrA(
-        "/users/admin/" )))
+                  "/print/pdf/" )))
       return false;
 
     if( in.containsStrA( new StrA(
-        "/users/login/" )))
+        ".leadville-co.gov/media/" )))
       return false;
 
     if( in.containsStrA( new StrA(
-        "/users/signup/" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-        "/classifieds/" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-        "/place_an_ad/" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-        "/ayuda-fund/" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-        ".php" )))
-      return false;
-
-
-    if( in.containsStrA( new StrA(
-        "apply.coloradomtn.edu" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-        "outlook.office.com" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-        ".alpinebank.com" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-        "&quot;" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-        "/." )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-        "application/pdf" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-      "coloradomtn.edu/download/" )))
-      return false;
-
-    if( in.endsWith( new StrA(
-           ".pdf" )))
-      return false;
-
-    if( in.endsWith( new StrA(
-           ".php" )))
-      return false;
-
-    if( in.endsWith( new StrA(
-           ".aspx" )))
-      return false;
-
-    if( in.containsStrA( new StrA(
-           "#" )))
+                "application/pdf" )))
       return false;
 
     if( in.containsStrA( new StrA(
            "/../" )))
       return false;
 
+    if( in.containsStrA( new StrA(
+           "#" )))
+      return false;
 
+    if( in.endsWith( new StrA(
+        ".php" )))
+      return false;
+
+    // if( in.containsStrA( new StrA(
+     //   "/users/login/" )))
+     // return false;
+
+    // if( in.containsStrA( new StrA(
+    //    "application/pdf" )))
+    //  return false;
+
+    if( in.endsWith( new StrA(
+                       ".pdf" )))
+      return false;
+
+    // if( in.endsWith( new StrA(
+    //       ".aspx" )))
+    //  return false;
 
     if( in.containsStrA( new StrA(
-         // "research.stlouisfed.org/" )))
-         ".stlouisfed.org/" )))
+        "www.leadville-co.gov/" )))
       return true;
 
-    if( in.containsStrA( new StrA(
-           ".federalreserve.gov/" )))
-      return true;
     return false;
     }
-
 
 
 

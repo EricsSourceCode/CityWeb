@@ -1,4 +1,4 @@
-// Copyright Eric Chauvin 2019 - 2024.
+// Copyright Eric Chauvin 2019 - 2025.
 
 
 
@@ -10,7 +10,7 @@
 
 
 
-// Econ Research
+// City Web
 
 
 
@@ -142,7 +142,7 @@ public final class MainWindow extends JFrame
              "Programming by Eric Chauvin.\n" +
              "Version date: " +
              MainApp.versionDate + "\n\n" +
-             "Economic Research";
+             "Leadville City Web";
 
     showStatusAsync( allTogether );
     }

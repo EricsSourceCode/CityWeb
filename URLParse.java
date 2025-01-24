@@ -1,9 +1,14 @@
-// Copyright Eric Chauvin 2020 - 2024.
+// Copyright Eric Chauvin 2020 - 2025.
 
 
 
+// This is licensed under the GNU General
+// Public License (GPL).  It is the
+// same license that Linux has.
+// https://www.gnu.org/licenses/gpl-3.0.html
 
-// isBadLink() checks for deeper levels.
+
+
 
 
 
@@ -344,6 +349,7 @@ public class URLParse
 
   private boolean hasValidDomain( StrA link )
     {
+/*
     if( link.containsStrA( new StrA(
         "/site/forms/" )))
       return false;
@@ -375,6 +381,7 @@ public class URLParse
     if( link.containsStrA( new StrA(
       "coloradomtn.edu/download/" )))
       return false;
+*/
 
     if( link.endsWith( new StrA(
            ".pdf" )))
@@ -396,48 +403,38 @@ public class URLParse
            ".aspx" )))
       return false;
 
-    if( link.containsStrA( new StrA(
-         ".federalreserve.gov/" )))
-      return true;
+    // if( link.containsStrA( new StrA(
+    //     ".federalreserve.gov/" )))
+      // return true;
 
     if( link.containsStrA( new StrA(
-           ".stlouisfed.org/" )))
+         ".leadville-co.gov/" )))
       return true;
 
     return false;
     }
 
-
-/*
-  public static boolean isSpanish( StrA link )
-    {
-    if( link.containsStrA( new StrA( "noticiasya.com" )))
-      return true;
-
-    if( link.containsStrA( new StrA( "diario.mx" )))
-      return true;
-
-    if( link.containsStrA( new StrA( "la-prensa.com.mx" )))
-      return true;
-
-    if( link.containsStrA( new StrA( "milenio.com" )))
-      return true;
-
-    return false;
-    }
-*/
 
 
 
   public boolean isBadLink( StrA link )
     {
-/*
-    if( !( baseURL.endsWith(
-              new StrA( "foxnews.com/" )) ||
-           baseURL.endsWith(
-              new StrA( "msnbc.com/" ))))
-      return true; // Don't want deeper levels.
-*/
+    if( link.containsStrA( new StrA(
+             ".leadville-co.gov/login" )))
+      return true;
+
+    if( link.containsStrA( new StrA(
+                  "/print/pdf/" )))
+      return true;
+
+    if( link.containsStrA( new StrA(
+        ".leadville-co.gov/media/" )))
+      return true;
+
+    if( link.containsStrA( new StrA(
+                "application/pdf" )))
+      return true;
+
 
     // wa.me is WhatsApp.
     // Messaging app owned by Facebook.

@@ -1,0 +1,12 @@
+buildfile	C:\Eric\Main\CityWeb\BuildProj.bat
+executablefile	C:\Eric\Main\CityWeb\RunApp.bat
+projectdirectory	\Eric\Main\CityWeb
+recentfile1	C:\Eric\Main\CityWeb\MainApp.java
+recentfile2	\Eric\Main\Docs\Notes.txt
+recentfile3	\Eric\Main\CityWeb\BuildProj.bat
+recentfile4	\Eric\Main\CityWeb\RunApp.bat
+recentfile5	\Eric\Main\CityWeb\MainWindow.java
+recentfile6	\Eric\Main\CityWeb\WebSites.java
+recentfile7	\Eric\Main\CityWeb\URLParse.java
+recentfile8	\Eric\Main\CityWeb\AnalyzeNewLinks.java
+recentfile9	\Eric\Main\CityWeb\StrA.java

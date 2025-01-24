@@ -1,4 +1,4 @@
-// Copyright Eric Chauvin 2019 - 2024.
+// Copyright Eric Chauvin 2019 - 2025.
 
 
 
@@ -10,9 +10,7 @@
 
 
 
-// Local Business Project.
-
-// "\\EconData\\URLFiles\\"
+// Leadville City Web Site Project.
 
 
 
@@ -29,7 +27,7 @@ import java.io.IOException;
 class MainApp implements Runnable, Serializable
   {
   public static final String versionDate =
-                              "11/18/2024";
+                              "1/24/2025";
   public static final long serialVersionUID = 1;
 
 
@@ -107,7 +105,8 @@ class MainApp implements Runnable, Serializable
     */
 
     mainWin = new MainWindow( this,
-                              "Econ Research" );
+                    "Leadville City Website" );
+
     mainWin.initialize();
 
     /*
